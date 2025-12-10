@@ -8,14 +8,13 @@ import { CategoryComponent } from './pages/category/category';
 import { ShopPageComponent } from './pages/shop/shop';
 import { ShopDetailsComponent } from './components/shop-details/shop-details';
 
-
 export const routes: Routes = [
-  { path: '', component: HomeComponent }, // home page
+  { path: '', component: HomeComponent },
   { path: 'about', component: About },
   { path: 'contact', component: Contact },
-  { path: 'shop', component: ShopPageComponent},
-  { path: 'shop/:id', component: ShopDetailsComponent }, // shop details
-  { path: 'categories', component: CategoryComponent},
-  { path: 'product/:id', component: ProductDetailComponent },
+  { path: 'shop', component: ShopPageComponent }, 
+  { path: 'shop/:id', component: ShopDetailsComponent, data: { renderMode: 'client' } }, // skip prerender
+  { path: 'categories', component: CategoryComponent },
+  { path: 'product/:id', component: ProductDetailComponent, data: { renderMode: 'client' } }, // skip prerender
   { path: 'login', component: LoginComponent },
 ];
