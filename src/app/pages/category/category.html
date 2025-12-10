@@ -1,0 +1,19 @@
+<div class="py-10 min-h-screen">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-12 w-max mx-auto relative tracking-tight">
+        Browse by Category
+        <span class="block w-28 h-2 bg-green-600 mx-auto mt-3 rounded-full shadow-lg shadow-green-300"></span>
+    </h2>
+    
+    <div class="space-y-12">
+      
+      <app-category-section
+          (categorySelected)="selectedCategory = $event"
+      ></app-category-section>
+      
+      <app-product-section [selectedCategory]="selectedCategory"></app-product-section>
+    
+    </div>
+  </div>
+</div>

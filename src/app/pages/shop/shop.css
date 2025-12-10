@@ -1,0 +1,29 @@
+.shop-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .products-list {
+    margin-left: 16px;
+  }
+  
+  .product-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 8px;
+    width: 150px;
+    text-align: center;
+  }
+  
+  .product-card img {
+    width: 100%;
+    border-radius: 4px;
+  }
+  

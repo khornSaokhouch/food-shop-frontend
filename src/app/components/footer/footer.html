@@ -1,0 +1,106 @@
+<footer class= " pt-10 pb-6 border-t-4 border-green-500">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-8 mb-10 border-b border-gray-700 pb-8">
+
+          <div class="col-span-2 md:col-span-1 pr-6">
+              <div class="text-3xl font-extrabold mb-4 tracking-wider">
+                  <span class="text-yellow-500">Delish</span><span class="text-green-500">Eats</span>
+              </div>
+              <p class="text-sm mb-4">
+                  The freshest groceries delivered to your door in under an hour.
+              </p>
+              <div class="text-sm space-y-2">
+                  <p class="flex items-center">
+                      <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.774a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.06-.54l4.435.74A1 1 0 0118 18v2.153a1 1 0 01-1 1H3a1 1 0 01-1-1v-2.153z"></path></svg>
+                      (123) 456-7890
+                  </p>
+                  <p class="flex items-center">
+                      <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                      support@delisheats.com
+                  </p>
+              </div>
+          </div>
+
+          <div>
+              <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+              <ul class="space-y-2 text-sm">
+                  <li><a routerLink="/" class="hover:text-yellow-500 transition">Home</a></li>
+                  <li><a routerLink="/about" class="hover:text-yellow-500 transition">About Us</a></li>
+                  <li><a routerLink="/blog" class="hover:text-yellow-500 transition">Our Blog</a></li>
+                  <li><a routerLink="/careers" class="hover:text-yellow-500 transition">Careers</a></li>
+              </ul>
+          </div>
+
+          <div>
+              <h4 class="text-lg font-semibold text-white mb-4">Shop & Discover</h4>
+              <ul class="space-y-2 text-sm">
+                  <li><a routerLink="/shop" class="hover:text-yellow-500 transition">All Products</a></li>
+                  <li><a routerLink="/deals" class="hover:text-yellow-500 transition">Weekly Deals</a></li>
+                  <li><a routerLink="/recipes" class="hover:text-yellow-500 transition">Recipes & Ideas</a></li>
+                  <li><a routerLink="/suppliers" class="hover:text-yellow-500 transition">Our Suppliers</a></li>
+              </ul>
+          </div>
+
+          <div>
+              <h4 class="text-lg font-semibold text-white mb-4">Support</h4>
+              <ul class="space-y-2 text-sm">
+                  <li><a routerLink="/faq" class="hover:text-yellow-500 transition">FAQ</a></li>
+                  <li><a routerLink="/contact" class="hover:text-yellow-500 transition">Contact Us</a></li>
+                  <li><a routerLink="/shipping" class="hover:text-yellow-500 transition">Shipping & Returns</a></li>
+                  <li><a routerLink="/privacy" class="hover:text-yellow-500 transition">Privacy Policy</a></li>
+              </ul>
+          </div>
+          
+          <div class="col-span-2 md:col-span-1">
+              <h4 class="text-lg font-semibold text-white mb-4">Get Fresh Deals</h4>
+              <p class="text-sm mb-3">Sign up for our newsletter for 10% off your first order.</p>
+              <form (ngSubmit)="subscribe()" class="flex flex-col sm:flex-row gap-2">
+                  <input 
+                      type="email" 
+                      [(ngModel)]="newsletterEmail" 
+                      name="newsletterEmail"
+                      placeholder="Your email address" 
+                      required
+                      class="px-4 py-2 w-full rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500"
+                  />
+                  <button 
+                      type="submit" 
+                      class="bg-green-500 text-gray-900 font-bold px-4 py-2 rounded-md hover:bg-green-600 transition"
+                  >
+                      Sign Up
+                  </button>
+              </form>
+          </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row justify-between items-center pt-4">
+          
+          <p class="text-sm text-gray-500 order-2 md:order-1 mt-4 md:mt-0">
+              &copy; 2025 DelishEats. All rights reserved. | Built with 💚
+          </p>
+
+          <div class="flex space-x-6">
+  
+            <a href="https://twitter.com" target="_blank"
+               class="text-blue-400 hover:text-blue-600 transition-colors duration-300">
+              <fa-icon [icon]="faTwitter" class="h-6 w-6"></fa-icon>
+            </a>
+          
+            <a href="https://facebook.com" target="_blank"
+               class="text-blue-700 hover:text-blue-900 transition-colors duration-300">
+              <fa-icon [icon]="faFacebook" class="h-6 w-6"></fa-icon>
+            </a>
+          
+            <a href="https://instagram.com" target="_blank"
+               class="text-pink-500 hover:text-pink-700 transition-colors duration-300">
+              <fa-icon [icon]="faInstagram" class="h-6 w-6"></fa-icon>
+            </a>
+          
+          </div>
+          
+          
+
+      </div>
+  </div>
+</footer>

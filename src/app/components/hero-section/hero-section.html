@@ -1,0 +1,83 @@
+<section class="py-6 md:py-6">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+  
+        <div class="text-center lg:text-left">
+          <p class="inline-block bg-green-100 text-green-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4 tracking-wider">
+            FRESH · FAST · LOCAL
+          </p>
+  
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
+            Fresh groceries, <span class="text-green-600">delivered fast</span> to your door.
+          </h1>
+  
+          <p class="mt-4 text-lg text-gray-600 max-w-xl mx-auto lg:mx-0">
+            Shop hand-picked fruits, vegetables, drinks, and delicious meals from local farms and trusted vendors. Fast delivery, great prices, and friendly service guaranteed.
+          </p>
+  
+          <div class="mt-8 flex justify-center lg:justify-start">
+            <div class="relative w-full max-w-lg">
+              <input
+                type="search"
+                aria-label="Search products"
+                [(ngModel)]="query"
+                (keyup.enter)="onSearch()"
+                placeholder="Search products, e.g. mango, chicken, milk..."
+                class="w-full pl-5 pr-36 py-3.5 rounded-full border-2 border-gray-300 shadow-lg focus:outline-none focus:ring-4 focus:ring-yellow-100 focus:border-green-500 transition"
+              />
+              <button (click)="onSearch()"
+                class="absolute right-1 top-1/2 transform -translate-y-1/2 bg-green-600 hover:bg-green-700 text-white font-semibold px-5 py-2 rounded-full shadow-md transition">
+                Search
+              </button>
+            </div>
+          </div>
+  
+          <div class="mt-6 flex flex-col sm:flex-row sm:items-center sm:space-x-4 gap-3 justify-center lg:justify-start">
+            <a routerLink="/shop"
+               class="inline-flex items-center justify-center px-8 py-3 rounded-full bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold shadow-xl transition transform hover:scale-[1.02] border border-yellow-500">
+               🛒 Start Shopping Now
+            </a>
+  
+            <a routerLink="/learn-more"
+               class="inline-flex items-center justify-center px-8 py-3 rounded-full border-2 border-gray-300 text-gray-700 hover:bg-white/50 hover:border-gray-400 font-medium transition">
+              How it Works
+            </a>
+          </div>
+  
+          <div class="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 text-sm text-gray-600">
+            <span class="flex items-center gap-2 font-medium">
+                <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.21a2 2 0 010 2.834L10 17.234l-3.618-3.618a2 2 0 01-2.834-2.834l.707-.707a2 2 0 012.834 0L10 13.121l1.707-1.707a2 2 0 012.834 0z"></path></svg> 
+                Quality Guaranteed
+            </span>
+            <span class="flex items-center gap-2 font-medium">
+                <svg class="w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 
+                Delivery in 60 Mins
+            </span>
+          </div>
+        </div>
+  
+        <div class="flex justify-center lg:justify-end order-first lg:order-none">
+          <div class="relative w-full max-w-md">
+            
+            <img
+              src="https://www.bankrate.com/2020/08/01170557/How-to-save-money-on-groceries.jpeg?auto=webp&optimize=high&crop=16:9"
+              alt="Fresh groceries"
+              class="w-full h-64 sm:h-80 md:h-96 object-cover rounded-xl shadow-xl transform transition-transform duration-500 hover:scale-105"
+            />
+  
+            <div class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-l-2xl shadow-2xl p-4 w-52 border-l-4 border-green-500 animate-pulse-slow hidden sm:block">
+              <div class="flex items-center gap-3">
+                <svg class="w-10 h-10 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c1.251-.555 1.704-1.397 1.837-2.735a1 1 0 00-1.745-.98l-3.268 3.268M6.343 7.343A8 8 0 0017.657 18.657S17 16 15 15c-1.251.555-1.704 1.397-1.837 2.735a1 1 0 001.745.98l3.268-3.268"></path></svg>
+                <div>
+                  <div class="text-sm font-bold text-gray-800">Flash Sale!</div>
+                  <div class="text-xs text-red-600 font-semibold">25% Off Fresh Produce</div>
+                  <div class="text-xs text-gray-500">Today Only</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>

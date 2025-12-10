@@ -1,0 +1,57 @@
+<div class="min-h-screen flex items-center justify-center p-4">
+  <div class="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-sm border-t-4 border-green-500">
+    
+    <div class="text-center mb-8">
+      <h1 class="text-3xl font-extrabold text-gray-800">
+        Welcome Back!
+      </h1>
+      <p class="text-sm text-gray-500 mt-1">Sign in to your DelishEats account</p>
+    </div>
+
+    <form (ngSubmit)="login()" class="flex flex-col space-y-5">
+      
+      <input 
+        type="email" 
+        [(ngModel)]="email" 
+        name="email"
+        placeholder="Your Email"
+        required
+        class="border border-gray-300 focus:border-green-500 focus:ring-1 focus:ring-green-500 px-4 py-3 rounded-lg transition duration-200"
+      />
+      
+      <input 
+        type="password" 
+        [(ngModel)]="password" 
+        name="password"
+        placeholder="Password"
+        required
+        class="border border-gray-300 focus:border-green-500 focus:ring-1 focus:ring-green-500 px-4 py-3 rounded-lg transition duration-200"
+      />
+      
+      <div *ngIf="errorMessage" class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+        <span class="block sm:inline">{{ errorMessage }}</span>
+      </div>
+
+      <button 
+        type="submit" 
+        class="bg-green-600 text-white font-semibold py-3 rounded-lg hover:bg-green-700 transition duration-200 shadow-md"
+      >
+        Log In
+      </button>
+      
+    </form>
+    
+    <div class="mt-6 text-center text-sm">
+      <a routerLink="/forgot-password" class="text-green-600 hover:text-green-700 font-medium transition">
+        Forgot Password?
+      </a>
+      <p class="mt-3 text-gray-600">
+        Don't have an account? 
+        <a routerLink="/register" class="text-yellow-600 hover:text-yellow-700 font-semibold transition">
+          Sign up here
+        </a>
+      </p>
+    </div>
+
+  </div>
+</div>

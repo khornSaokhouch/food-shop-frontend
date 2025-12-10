@@ -1,0 +1,31 @@
+<div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+  
+    <div class="mb-12 sm:text-left text-center">
+        <h2 class="text-5xl font-extrabold text-gray-900 mb-3">
+          Fresh Finds Near You
+        </h2>
+        
+        <div class="w-20 h-1 bg-green-600 mb-4 sm:mx-0 mx-auto"></div>
+      
+        <p class="text-xl text-gray-600 max-w-2xl sm:max-w-none sm:mx-0 mx-auto">
+          Explore our curated selection of high-quality, locally sourced goods from trusted vendors.
+        </p>
+      </div>
+  
+    <!-- Shops Grid (show only 3 shops in one line) -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+      <ng-container *ngFor="let shop of shops.slice(0,3)">
+        <app-shop-card [shop]="shop"></app-shop-card>
+      </ng-container>
+    </div>
+  
+    <!-- See All Button -->
+    <div class="text-center mt-8">
+      <a routerLink="/shop"
+         class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+         See All Shops
+      </a>
+    </div>
+  
+  </div>
+  

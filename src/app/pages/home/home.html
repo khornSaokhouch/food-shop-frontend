@@ -1,0 +1,51 @@
+<app-hero-section></app-hero-section>
+
+<!-- Shop Section -->
+<app-shop-section></app-shop-section>
+
+<div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    
+    <div class="mb-8">
+      <h2 class="text-5xl font-extrabold text-gray-900 mb-2">
+        Browse Fresh Categories
+      </h2>
+      
+      <div class="w-16 h-1 bg-green-600 mb-4"></div>
+
+      <p class="text-xl text-gray-600">
+        Find exactly what you need, from dairy to fresh baked goods.
+      </p>
+    </div>
+
+    <!-- Horizontal scroll container -->
+    <div class="flex space-x-6 overflow-x-auto pb-4 scrollbar-hide">
+      <ng-container *ngFor="let category of categories">
+        <app-category-card [category]="category" class="flex-shrink-0"></app-category-card>
+      </ng-container>
+    </div>
+
+    <div class="text-center mt-6">
+        <button
+          class="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
+          routerLink="/categories"
+        >
+          See All Categories
+        </button>
+    </div>
+</div>
+
+  
+
+<div class="mt-12">
+  <!-- Pass only top 8 products -->
+  <app-product [products]="topProducts"></app-product>
+
+  <div class="text-center mt-6">
+    <button
+      class="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
+      routerLink="/categories"
+    >
+      See All Products
+    </button>
+  </div>
+</div>
